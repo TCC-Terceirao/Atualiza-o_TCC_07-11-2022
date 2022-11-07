@@ -1,0 +1,33 @@
+use tabela;
+Create table Grupo(
+	id INT AUTO_INCREMENT NOT NULL PRIMARY KEY,
+   	nomeGrupo VARCHAR(30) NOT NULL
+);
+
+Create table Elemento(
+	id INT AUTO_INCREMENT NOT NULL PRIMARY KEY,
+   	simbolo VARCHAR(2) NOT NULL,
+   	nome VARCHAR(25) NOT NULL,
+   	nmr_atomico INT NOT NULL,
+   	massa VARCHAR(10) NOT NULL,
+   	id_grupo INT NOT NULL,
+	FOREIGN KEY (id_grupo) REFERENCES Grupo(Id)
+);
+
+INSERT INTO Grupo(id, nomeGrupo) VALUES 
+(1 , "Não Metais"),
+(2 , "Gases Nobres"),
+(3 , "Metais Alcalinos"),
+(4 , "Metais Alcalino-Terrosos"),
+(5 , "Semimetais"),
+(6 , "Halogênios"),
+(7 , "Outros Metais"),
+(8 , "Metais de Transição"),
+(9 , "Lantanídeos"),
+(10 , "Actinídios");
+
+INSERT INTO Elemento(id, simbolo, nome, nmr_atomico, massa, id_grupo) VALUES
+(1, "H", "Hidrogênio", 1, "1,008", 1)
+(1, "H", "Hidrogênio", 1, "1,008", 1),
+(1, "H", "Hidrogênio", 1, "1,008", 1),
+(1, "H", "Hidrogênio", 1, "1,008", 1);

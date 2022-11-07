@@ -1,0 +1,1085 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="CSS/style.css">
+    <script type="text/javascript" src="js/DesativarBotoes.js"></script>
+    <title>Tabela-Periódica</title>
+</head>
+<body>
+    <form id="box" method="post" action="php/validarElemento.php" >
+        <div>
+            <input type="checkbox" class="checkbox" id="checkbox">
+            <label for="checkbox" class="label">
+            <div class="ball"></div>
+        </label>
+        </div>
+        <div class="titulo">
+            <h1>Tabela Periódica dos Elementos Químicos</h1>
+        </div>
+        
+        <!--Linha 1-->
+        <div id="corpo1">
+            <div class="filtros">
+                <select name="selecao" id="selecao" onchange="filtrar()">
+                    <option  value="nao_metal">Não Metais</option>
+                    <option  value="gas_nobre">Gases Nobres</option>
+                    <option  value="metal_alcalino">Metais Alcalinos</option>
+                    <option  value="metal_alcalino_terroso">Metais Alcalino-Terrosos</option>
+                    <option  value="semimetal">Semimetais</option>
+                    <option  value="halogenio">Halogênios</option>
+                    <option  value="outros_metais">Outros Metais</option>
+                    <option  value="metal_transicao">Metais de Transição</option>
+                    <option  value="lantanideo">Lantanídeos</option>
+                    <option  value="actinidio">Actinídios</option>        
+                </select>
+            </div>
+            <div class="linhas1">
+                <button class="nao-metal" name="botao" value="1">
+                    <section class="elemento">
+                        <span>1</span>
+                        <h2>H</h2>
+                        <p>Hidrogênio</p>
+                        <p>1,008</p>
+                    </section>
+                </button>
+                <button class="metal-alcalino" name="botao" value="3">
+                    <section class="elemento">
+                        <span>3</span>
+                        <h2>Li</h2>
+                        <p>Lítio</p>
+                        <p>6,94</p>
+                    </section>
+                </button>
+                <button class="metal-alcalino" name="botao" value="11">
+                    <section class="elemento">
+                        <span>11</span>
+                        <h2>So</h2>
+                        <p>Sódio</p>
+                        <p>22,990</p>
+                    </section>
+                </button>
+                <button class="metal-alcalino" name="19">
+                    <section class="elemento">
+                        <span>19</span>
+                        <h2>K</h2>
+                        <p>Potássio</p>
+                        <p>39,098</p>
+                    </section>
+                </button>
+                <button class="metal-alcalino" name="37">
+                    <section class="elemento">
+                        <span>37</span>
+                        <h2>Rb</h2>
+                        <p>Rúbio</p>
+                        <p>85,468</p>
+                    </section>
+                </button>
+                <button class="metal-alcalino" name="55">
+                    <section class="elemento">
+                        <span>55</span>
+                        <h2>Cs</h2>
+                        <p>Césio</p>
+                        <p>132,91</p>
+                    </section>
+                </button>
+                <button class="metal-alcalino" name="87">
+                    <section class="elemento">
+                        <span>87</span>
+                        <h2>Fr</h2>
+                        <p>Frâncio</p>
+                        <p>223</p>
+                    </section>
+                </button>
+            </div>
+
+            <!--Linha 2-->
+            <div class="linhas2">
+                <button class="metal-alcalino-terroso" name="4">
+                    <section class="elemento">
+                        <span>4</span>
+                        <h2>Be</h2>
+                        <p>Berílio</p>
+                        <p>9,0122</p>
+                    </section>
+                </button>
+                <button class="metal-alcalino-terroso" name="12">
+                    <section class="elemento">
+                        <span>12</span>
+                        <h2>Mg</h2>
+                        <p>Magnesio</p>
+                        <p>24,305</p>
+                    </section>
+                </button>
+                <button class="metal-alcalino-terroso" name="20">
+                    <section class="elemento">
+                        <span>20</span>
+                        <h2>Ca</h2>
+                        <p>Cálcio</p>
+                        <p>40,078</p>
+                    </section>
+                </button>
+                <button class="metal-alcalino-terroso" name="38">
+                    <section class="elemento">
+                        <span>38</span>
+                        <h2>Sr</h2>
+                        <p>Estrôncio</p>
+                        <p>87,62</p>
+                    </section>
+                </button>
+                <button class="metal-alcalino-terroso" name="56">
+                    <section class="elemento">
+                        <span>56</span>
+                        <h2>Ba</h2>
+                        <p>Bário</p>
+                        <p>137,33</p>
+                    </section>
+                </button>
+                <button class="metal-alcalino-terroso" name="88">
+                    <section class="elemento">
+                        <span>88</span>
+                        <h2>Ra</h2>
+                        <p>Rádio</p>
+                        <p>226</p>
+                    </section>
+                </button>
+            </div>
+            <!--Linha 3-->
+            <div class="linhas3">
+                <button class="metal-transicao" name="21">
+                    <section class="elemento">
+                        <span>21</span>
+                        <h2>Sc</h2>
+                        <p>Escândio</p>
+                        <p>44,956</p>
+                    </section>
+                </button>
+                <button class="metal-transicao" name="2">
+                    <section class="elemento">
+                        <span>39</span>
+                        <h2>Y</h2>
+                        <p>Ítrio</p>
+                        <p>88,906</p>
+                    </section>
+                </button>
+                <button class="lantanideo" name="#">
+                    <section class="elemento">
+                        <span>57-71</span>
+                        <h2></h2>
+                        <p style="font-size: 40px; margin-top: 10%;">*</p>
+                        <p></p>
+                    </section>
+                </button>
+                <button class="actinidio" name="#">
+                    <section class="elemento">
+                        <span>89-103</span>
+                        <h2></h2>
+                        <p style="font-size: 40px; margin-top: 10%;">*</p>
+                        <p></p>
+                    </section>
+                </button>
+            </div>
+            <!--Linha 4-->
+            <div class="linhas3">
+                <button class="metal-transicao" name="22">
+                    <section class="elemento">
+                        <span>22</span>
+                        <h2>Ti</h2>
+                        <p>Titânio</p>
+                        <p>47,867</p>
+                    </section>
+                </button>
+                <button class="metal-transicao" name="40">
+                    <section class="elemento">
+                        <span>40</span>
+                        <h2>Zr</h2>
+                        <p>Zircônio</p>
+                        <p>91,224</p>
+                    </section>
+                </button>
+                <button class="metal-transicao" name="72">
+                    <section class="elemento">
+                        <span>72</span>
+                        <h2>Hf</h2>
+                        <p>Háfnio</p>
+                        <p>178,49</p>
+                    </section>
+                </button>
+                <button class="metal-transicao" name="104">
+                    <section class="elemento">
+                        <span>104</span>
+                        <h2>Rf</h2>
+                        <p>Rutherfórdio</p>
+                        <p>267</p>
+                    </section>
+                </button>
+                <button class="lantanideo2" name="4">
+                    <section class="elemento">
+                        <span>64</span>
+                        <h2>Gd</h2>
+                        <p>Gadolínio</p>
+                        <p>157,25</p>
+                    </section>
+                </button>
+                <button class="actinidio" name="4">
+                    <section class="elemento">
+                        <span>96</span>
+                        <h2>Cm</h2>
+                        <p>Cúrio</p>
+                        <p>247</p>
+                    </section>
+                </button>
+            </div>
+            <!--Linha 5-->
+            <div class="linhas3">
+                <button class="metal-transicao" name="23">
+                    <section class="elemento">
+                        <span>23</span>
+                        <h2>V</h2>
+                        <p>Vanádio</p>
+                        <p>50,942</p>
+                    </section>
+                </button>
+                <button class="metal-transicao" name="41">
+                    <section class="elemento">
+                        <span>41</span>
+                        <h2>Nb</h2>
+                        <p>Nióbio</p>
+                        <p>92,906</p>
+                    </section>
+                </button>
+                <button class="metal-transicao" name="73">
+                    <section class="elemento">
+                        <span>73</span>
+                        <h2>Ta</h2>
+                        <p>Tântalo</p>
+                        <p>180,948</p>
+                    </section>
+                </button>
+                <button class="metal-transicao" name="105">
+                    <section class="elemento">
+                        <span>105</span>
+                        <h2>Db</h2>
+                        <p>Dúbnio</p>
+                        <p>268</p>
+                    </section>
+                </button>
+                <button class="lantanideo2" name="4">
+                    <section class="elemento">
+                        <span>64</span>
+                        <h2>Gd</h2>
+                        <p>Gadolínio</p>
+                        <p>157,25</p>
+                    </section>
+                </button>
+                <button class="actinidio" name="4">
+                    <section class="elemento">
+                        <span>96</span>
+                        <h2>Cm</h2>
+                        <p>Cúrio</p>
+                        <p>247</p>
+                    </section>
+                </button>
+            </div>
+
+            <!--Linha 6-->
+            <div class="linhas3">
+                <button class="metal-transicao" name="24">
+                    <section class="elemento">
+                        <span>24</span>
+                        <h2>Cr</h2>
+                        <p>Crômio</p>
+                        <p>51,996</p>
+                    </section>
+                </button>
+                <button class="metal-transicao" name="42">
+                    <section class="elemento">
+                        <span>42</span>
+                        <h2>Mo</h2>
+                        <p>Molibdênio</p>
+                        <p>95,95</p>
+                    </section>
+                </button>
+                <button class="metal-transicao" name="74">
+                    <section class="elemento">
+                        <span>74</span>
+                        <h2>W</h2>
+                        <p>Trungstênio</p>
+                        <p>183,84</p>
+                    </section>
+                </button>
+                <button class="metal-transicao" name="106">
+                    <section class="elemento">
+                        <span>106</span>
+                        <h2>Sg</h2>
+                        <p>Seabórgio</p>
+                        <p>263</p>
+                    </section>
+                </button>
+                <button class="lantanideo2" name="4">
+                    <section class="elemento">
+                        <span>64</span>
+                        <h2>Gd</h2>
+                        <p>Gadolínio</p>
+                        <p>157,25</p>
+                    </section>
+                </button>
+                <button class="actinidio" name="4">
+                    <section class="elemento">
+                        <span>96</span>
+                        <h2>Cm</h2>
+                        <p>Cúrio</p>
+                        <p>247</p>
+                    </section>
+                </button>
+            </div>
+        
+            <!--Linha 7-->
+            <div class="linhas3">
+                <button class="metal-transicao" name="25">
+                    <section class="elemento">
+                        <span>25</span>
+                        <h2>Mn</h2>
+                        <p>Manganês</p>
+                        <p>54,938</p>
+                    </section>
+                </button>
+                <button class="metal-transicao" name="43">
+                    <section class="elemento">
+                        <span>43</span>
+                        <h2>Tc</h2>
+                        <p>Tecnécio</p>
+                        <p>98</p>
+                    </section>
+                </button>
+                <button class="metal-transicao" name="75">
+                    <section class="elemento">
+                        <span>75</span>
+                        <h2>Re</h2>
+                        <p>Rênio</p>
+                        <p>186,207</p>
+                    </section>
+                </button>
+                <button class="metal-transicao" name="107">
+                    <section class="elemento">
+                        <span>107</span>
+                        <h2>Bh</h2>
+                        <p>Bóhrio</p>
+                        <p>270</p>
+                    </section>
+                </button>
+                <button class="lantanideo2" name="4">
+                    <section class="elemento">
+                        <span>64</span>
+                        <h2>Gd</h2>
+                        <p>Gadolínio</p>
+                        <p>157,25</p>
+                    </section>
+                </button>
+                <button class="actinidio" name="4">
+                    <section class="elemento">
+                        <span>96</span>
+                        <h2>Cm</h2>
+                        <p>Cúrio</p>
+                        <p>247</p>
+                    </section>
+                </button>
+            </div>
+
+            <!--Linha 8-->
+            <div class="linhas3">
+                <button class="metal-transicao" name="26">
+                    <section class="elemento">
+                        <span>26</span>
+                        <h2>Fe</h2>
+                        <p>Ferro</p>
+                        <p>55,845</p>
+                    </section>
+                </button>
+                <button class="metal-transicao" name="44">
+                    <section class="elemento">
+                        <span>44</span>
+                        <h2>Ru</h2>
+                        <p>Rutênio</p>
+                        <p>101,07</p>
+                    </section>
+                </button>
+                <button class="metal-transicao" name="76">
+                    <section class="elemento">
+                        <span>76</span>
+                        <h2>Os</h2>
+                        <p>Ósmio</p>
+                        <p>190,23</p>
+                    </section>
+                </button>
+                <button class="metal-transicao" name="109">
+                    <section class="elemento">
+                        <span>109</span>
+                        <h2>Hs</h2>
+                        <p>Meitnério</p>
+                        <p>278</p>
+                    </section>
+                </button>
+                <button class="lantanideo2" name="4">
+                    <section class="elemento">
+                        <span>64</span>
+                        <h2>Gd</h2>
+                        <p>Gadolínio</p>
+                        <p>157,25</p>
+                    </section>
+                </button>
+                <button class="actinidio" name="4">
+                    <section class="elemento">
+                        <span>96</span>
+                        <h2>Cm</h2>
+                        <p>Cúrio</p>
+                        <p>247</p>
+                    </section>
+                </button>
+            </div>
+
+            <!--Linha 9-->
+            <div class="linhas3">
+                <button class="metal-transicao" name="27">
+                    <section class="elemento">
+                        <span>27</span>
+                        <h2>B</h2>
+                        <p>Cobalto</p>
+                        <p>58,933</p>
+                    </section>
+                </button>
+                <button class="metal-transicao" name="45">
+                    <section class="elemento">
+                        <span>45</span>
+                        <h2>Rh</h2>
+                        <p>Ródio</p>
+                        <p>106,42</p>
+                    </section>
+                </button>
+                <button class="metal-transicao" name="77">
+                    <section class="elemento">
+                        <span>77</span>
+                        <h2>Ir</h2>
+                        <p>Irídio</p>
+                        <p>195,08</p>
+                    </section>
+                </button>
+                <button class="metal-transicao" name="109">
+                    <section class="elemento">
+                        <span>109</span>
+                        <h2>In</h2>
+                        <p>Meitinério</p>
+                        <p>[281]</p>
+                    </section>
+                </button>
+                <button class="lantanideo2" name="4">
+                    <section class="elemento">
+                        <span>64</span>
+                        <h2>Gd</h2>
+                        <p>Gadolínio</p>
+                        <p>157,25</p>
+                    </section>
+                </button>
+                <button class="actinidio" name="4">
+                    <section class="elemento">
+                        <span>96</span>
+                        <h2>Cm</h2>
+                        <p>Cúrio</p>
+                        <p>247</p>
+                    </section>
+                </button>
+            </div>
+
+            <!--Linha 10-->
+            <div class="linhas3">
+                <button class="metal-transicao" name="20">
+                    <section class="elemento">
+                        <span>20</span>
+                        <h2>Ni</h2>
+                        <p>Níquel</p>
+                        <p>58,693</p>
+                    </section>
+                </button>
+                <button class="metal-transicao" name="2">
+                    <section class="elemento">
+                        <span>46</span>
+                        <h2>Pd</h2>
+                        <p>Paládio</p>
+                        <p>106,42</p>
+                    </section>
+                </button>
+                <button class="metal-transicao" name="3">
+                    <section class="elemento">
+                        <span>78</span> 
+                        <h2>Pt</h2> 
+                        <p>Platina</p> 
+                        <p>195,084</p>
+                    </section>
+                </button>
+                <button class="metal-transicao" name="4">
+                    <section class="elemento">
+                        <span>110</span>
+                        <h2>Ds</h2>
+                        <p>Darmstádtio</p>
+                        <p>281</p>
+                    </section>
+                </button>
+                <button class="lantanideo2" name="4">
+                    <section class="elemento">
+                        <span>64</span>
+                        <h2>Gd</h2>
+                        <p>Gadolínio</p>
+                        <p>157,25</p>
+                    </section>
+                </button>
+                <button class="actinidio" name="4">
+                    <section class="elemento">
+                        <span>96</span>
+                        <h2>Cm</h2>
+                        <p>Cúrio</p>
+                        <p>247</p>
+                    </section>
+                </button>
+            </div>
+
+            <!--Linha 11-->
+            <div class="linhas3">
+                <button class="metal-transicao" name="29">
+                    <section class="elemento">
+                        <span>29</span>
+                        <h2>Cu</h2>
+                        <p>Cobre</p>
+                        <p>63,546</p>
+                    </section>
+                </button>
+                <button class="metal-transicao" name="47">
+                    <section class="elemento">
+                        <span>47</span>
+                        <h2>Ag</h2>
+                        <p>Prata</p>
+                        <p>107,87</p>
+                    </section>
+                </button>
+                <button class="metal-transicao" name="79">
+                    <section class="elemento">
+                        <span>79</span>
+                        <h2>Au</h2>
+                        <p>Ouro</p>
+                        <p>196,97</p>
+                    </section>
+                </button>
+                <button class="metal-transicao" name="111">
+                    <section class="elemento">
+                        <span>111</span>
+                        <h2>Rg</h2>
+                        <p>Roentgênio</p>
+                        <p>281</p>
+                    </section>
+                </button>
+                <button class="lantanideo2" name="4">
+                    <section class="elemento">
+                        <span>64</span>
+                        <h2>Gd</h2>
+                        <p>Gadolínio</p>
+                        <p>157,25</p>
+                    </section>
+                </button>
+                <button class="actinidio" name="4">
+                    <section class="elemento">
+                        <span>96</span>
+                        <h2>Cm</h2>
+                        <p>Cúrio</p>
+                        <p>247</p>
+                    </section>
+                </button>
+            </div>
+
+            <!--Linha 12-->
+            <div class="linhas3">
+                <button class="metal-transicao" name="30">
+                    <section class="elemento">
+                        <span>30</span>
+                        <h2>Zn</h2>
+                        <p>Zinco</p>
+                        <p>65,38</p>
+                    </section>
+                </button>
+                <button class="metal-transicao" name="48">
+                    <section class="elemento">
+                        <span>48</span>
+                        <h2>Cd</h2>
+                        <p>Cádmio</p>
+                        <p>112,41</p>
+                    </section>
+                </button>
+                <button class="metal-transicao" name="80">
+                    <section class="elemento">
+                        <span>80</span>
+                        <h2>Hg</h2>
+                        <p>Mercúrio</p>
+                        <p>200,59</p>
+                    </section>
+                </button>
+                <button class="metal-transicao" name="112">
+                    <section class="elemento">
+                        <span>112</span>
+                        <h2>Cn</h2>
+                        <p>Copemício</p>
+                        <p>285</p>
+                    </section>
+                </button>
+                <button class="lantanideo2" name="4">
+                    <section class="elemento">
+                        <span>64</span>
+                        <h2>Gd</h2>
+                        <p>Gadolínio</p>
+                        <p>157,25</p>
+                    </section>
+                </button>
+                <button class="actinidio" name="4">
+                    <section class="elemento">
+                        <span>96</span>
+                        <h2>Cm</h2>
+                        <p>Cúrio</p>
+                        <p>247</p>
+                    </section>
+                </button>
+            </div>
+
+            <!--Linha 13-->
+            <div class="linhas2">
+                <button class="semimetal" name="5">
+                    <section class="elemento">
+                        <span>5</span>
+                        <h2>B</h2>
+                        <p>Boro</p>
+                        <p>10,81</p>
+                    </section>
+                </button>
+                <button class="outros-metais" name="13">
+                    <section class="elemento">
+                        <span>13</span>
+                        <h2>Ai</h2>
+                        <p>Alumínio</p>
+                        <p>26,982</p>
+                    </section>
+                </button>
+                <button class="outros-metais" name="31">
+                    <section class="elemento">
+                        <span>31</span>
+                        <h2>Ga</h2>
+                        <p>Gálio</p>
+                        <p>69,723</p>
+                    </section>
+                </button>
+                <button class="outros-metais" name="49">
+                    <section class="elemento">
+                        <span>49</span>
+                        <h2>In</h2>
+                        <p>Índio</p>
+                        <p>114,82</p>
+                    </section>
+                </button>
+                <button class="outros-metais" name="81">
+                    <section class="elemento">
+                        <span>81</span>
+                        <h2>Ti</h2>
+                        <p>Tálio</p>
+                        <p>204,38</p>
+                    </section>
+                </button>
+                <button class="outros-metais" name="113">
+                    <section class="elemento">
+                        <span>113</span>
+                        <h2>Nh</h2>
+                        <p>Nihônio</p>
+                        <p>286</p>
+                    </section>
+                </button>
+                <button class="lantanideo1" name="4">
+                    <section class="elemento">
+                        <span>64</span>
+                        <h2>Gd</h2>
+                        <p>Gadolínio</p>
+                        <p>157,25</p>
+                    </section>
+                </button>
+                <button class="actinidio" name="4">
+                    <section class="elemento">
+                        <span>96</span>
+                        <h2>Cm</h2>
+                        <p>Cúrio</p>
+                        <p>247</p>
+                    </section>
+                </button>
+            </div>
+
+            <!--Linha 14-->
+            <div class="linhas2">
+                <button class="nao-metal" name="1">
+                    <section class="elemento">
+                        <span>6</span>
+                        <h2>C</h2>
+                        <p>Carbono</p>
+                        <p>12,001</p>
+                    </section>
+                </button>
+                <button class="semimetal" name="2">
+                    <section class="elemento">
+                        <span>14</span>
+                        <h2>Si</h2>
+                        <p>Silício</p>
+                        <p>28,085</p>
+                    </section>
+                </button>
+                <button class="semimetal" name="3">
+                    <section class="elemento">
+                        <span>32</span>
+                        <h2>Ge</h2>
+                        <p>Germânio</p>
+                        <p>72,630</p>
+                    </section>
+                </button>
+                <button class="outros-metais" name="4">
+                    <section class="elemento">
+                        <span>50</span>
+                        <h2>Sn</h2>
+                        <p>Estanho</p>
+                        <p>118,71</p>
+                    </section>
+                </button>
+                <button class="outros-metais" name="5">
+                    <section class="elemento">
+                        <span>82</span>
+                        <h2>Pb</h2>
+                        <p>Chumbo</p>
+                        <p>207,2</p>
+                    </section>
+                </button>
+                <button class="outros-metais" name="6">
+                    <section class="elemento">
+                        <span>114</span>
+                        <h2>Fl</h2>
+                        <p>Fleróvio</p>
+                        <p>289</p>
+                    </section>
+                </button>
+                <button class="lantanideo1" name="4">
+                    <section class="elemento">
+                        <span>64</span>
+                        <h2>Gd</h2>
+                        <p>Gadolínio</p>
+                        <p>157,25</p>
+                    </section>
+                </button>
+                <button class="actinidio" name="4">
+                    <section class="elemento">
+                        <span>96</span>
+                        <h2>Cm</h2>
+                        <p>Cúrio</p>
+                        <p>247</p>
+                    </section>
+                </button>
+            </div>
+
+            <!--Linha 15-->
+            <div class="linhas2">
+                <button class="nao-metal" name="1">
+                    <section class="elemento">
+                        <span>7</span>
+                        <h2>N</h2>
+                        <p>Nitrogênio</p>
+                        <p>14,004</p>
+                    </section>
+                </button>
+                <button class="nao-metal" name="2">
+                    <section class="elemento">
+                        <span>15</span>
+                        <h2>P</h2>
+                        <p>Fósforo</p>
+                        <p>30,974</p>
+                    </section>
+                </button>
+                <button class="semimetal" name="3">
+                    <section class="elemento">
+                        <span>33</span>
+                        <h2>As</h2>
+                        <p>Arsênio</p>
+                        <p>74,922</p>
+                    </section>
+                </button>
+                <button class="semimetal" name="4">
+                    <section class="elemento">
+                        <span>51</span>
+                        <h2>Sb</h2>
+                        <p>Antimônio</p>
+                        <p>121,79</p>
+                    </section>
+                </button>
+                <button class="outros-metais" name="5">
+                    <section class="elemento">
+                        <span>83</span>
+                        <h2>Bi</h2>
+                        <p>Bismuto</p>
+                        <p>208,98</p>
+                    </section>
+                </button>
+                <button class="outros-metais" name="6">
+                    <section class="elemento">
+                        <span>115</span>
+                        <h2>Mc</h2>
+                        <p>Moscóvio</p>
+                        <p>289</p>
+                    </section>
+                </button>
+                <button class="lantanideo1" name="4">
+                    <section class="elemento">
+                        <span>64</span>
+                        <h2>Gd</h2>
+                        <p>Gadolínio</p>
+                        <p>157,25</p>
+                    </section>
+                </button>
+                <button class="actinidio" name="4">
+                    <section class="elemento">
+                        <span>96</span>
+                        <h2>Cm</h2>
+                        <p>Cúrio</p>
+                        <p>247</p>
+                    </section>
+                </button>
+            </div>
+
+            <!--Linha 16-->
+            <div class="linhas2">
+                <button class="nao-metal" name="1">
+                    <section class="elemento">
+                        <span>8</span>
+                        <h2>O</h2>
+                        <p>Oxigênio</p>
+                        <p>15,999</p>
+                    </section>
+                </button>
+                <button class="nao-metal" name="2">
+                    <section class="elemento">
+                        <span>16</span>
+                        <h2>S</h2>
+                        <p>Enxofre</p>
+                        <p>30,06</p>
+                    </section>
+                </button>
+                <button class="nao-metal" name="3">
+                    <section class="elemento">
+                        <span>34</span>
+                        <h2>Se</h2>
+                        <p>Selênio</p>
+                        <p>78,971</p>
+                    </section>
+                </button>
+                <button class="semimetal" name="4">
+                    <section class="elemento">
+                        <span>52</span>
+                        <h2>Te</h2>
+                        <p>Telúrio</p>
+                        <p>127,60</p>
+                    </section>  
+                </button>
+                <button class="semimetal" name="5">
+                    <section class="elemento">
+                        <span>84</span>
+                        <h2>Po</h2>
+                        <p>Polônio</p>
+                        <p>209</p>
+                    </section>
+                </button>
+                <button class="outros-metais" name="6">
+                    <section class="elemento">
+                        <span>116</span>
+                        <h2>Lv</h2>
+                        <p>Livermório</p>
+                        <p>293</p>
+                    </section>
+                </button>
+                <button class="lantanideo1" name="4">
+                    <section class="elemento">
+                        <span>64</span>
+                        <h2>Gd</h2>
+                        <p>Gadolínio</p>
+                        <p>157,25</p>
+                    </section>
+                </button>
+                <button class="actinidio" name="4">
+                    <section class="elemento">
+                        <span>96</span>
+                        <h2>Cm</h2>
+                        <p>Cúrio</p>
+                        <p>247</p>
+                    </section>
+                </button>
+            </div>
+
+            <!--Linha 17-->
+            <div class="linhas2">
+                <button class="halogenio" name="5">
+                    <section class="elemento">
+                        <span>9</span>
+                        <h2>F</h2>
+                        <p>Flúor</p>
+                        <p>18,998</p>
+                    </section>
+                </button>
+                <button class="halogenio" name="6">
+                    <section class="elemento">
+                        <span>17</span>
+                        <h2>Cl</h2>
+                        <p>Cloro</p>
+                        <p>30,45</p>
+                    </section>
+                </button>
+                <button class="halogenio" name="1">
+                    <section class="elemento">
+                        <span>35</span>
+                        <h2>Br</h2>
+                        <p>Bromo</p>
+                        <p>79,904</p>
+                    </section>
+                </button>
+                <button class="halogenio" name="2">
+                    <section class="elemento">
+                        <span>53</span>
+                        <h2>I</h2>
+                        <p>Lodo</p>
+                        <p>126,90</p>
+                    </section>
+                </button>
+                <button class="halogenio" name="3">
+                    <section class="elemento">
+                        <span>85</span>
+                        <h2>At</h2>
+                        <p>Ástato</p>
+                        <p>210</p>
+                    </section>
+                </button>
+                <button class="halogenio" name="4">
+                    <section class="elemento">
+                        <span>117</span>
+                        <h2>Ts</h2>
+                        <p>Tenesso</p>
+                        <p>294</p>
+                    </section>
+                </button>
+                <button class="lantanideo1" name="4">
+                    <section class="elemento">
+                        <span>64</span>
+                        <h2>Gd</h2>
+                        <p>Gadolínio</p>
+                        <p>157,25</p>
+                    </section>
+                </button>
+                <button class="actinidio" name="4">
+                    <section class="elemento">
+                        <span>96</span>
+                        <h2>Cm</h2>
+                        <p>Cúrio</p>
+                        <p>247</p>
+                    </section>
+                </button>
+            </div>
+
+            <!--Linha 18-->
+            <div class="linhas1">
+                <button class="gas-nobre" name="2">
+                    <section class="elemento">
+                        <span>2</span>
+                        <h2>He</h2>
+                        <p>Hélio</p>
+                        <p>4,0026</p>
+                    </section>
+                </button>
+                <button class="gas-nobre" name="10">
+                    <section class="elemento">
+                        <span>10</span>
+                        <h2>Ne</h2>
+                        <p>Neónio</p>
+                        <p>20,180</p>
+                    </section>
+                </button>
+                <button class="gas-nobre" name="18">
+                    <section class="elemento">
+                        <span>18</span>
+                        <h2>Ar</h2>
+                        <p>Argónio</p>
+                        <p>39,948</p>
+                    </section>
+                </button>
+                <button class="gas-nobre" name="36">
+                    <section class="elemento">
+                        <span>36</span>
+                        <h2>Kr</h2>
+                        <p>Criptônio</p>
+                        <p>88,789</p>
+                    </section>
+                </button>
+                <button class="gas-nobre" name="54">
+                    <section class="elemento">
+                        <span>54</span>
+                        <h2>Xe</h2>
+                        <p>Xenônio</p>
+                        <p>131,29</p>
+                    </section>
+                </button>
+                <button class="gas-nobre" name="86">
+                    <section class="elemento">
+                        <span>86</span>
+                        <h2>Rn</h2>
+                        <p>Randônio</p>
+                        <p>222</p>
+                    </section>
+                </button>
+                <button class="gas-nobre" name="118">
+                    <section class="elemento">
+                        <span>118</span>
+                        <h2>Og</h2>
+                        <p>Organessônio</p>
+                        <p>294</p>
+                    </section>
+                </button>
+                <button class="lantanideo1" name="4">
+                    <section class="elemento">
+                        <span>64</span>
+                        <h2>Gd</h2>
+                        <p>Gadolínio</p>
+                        <p>157,25</p>
+                    </section>
+                </button>
+                <button class="actinidio" name="4">
+                    <section class="elemento">
+                        <span>96</span>
+                        <h2>Cm</h2>
+                        <p>Cúrio</p>
+                        <p>247</p>
+                    </section>
+                </button>
+            </div>
+        </div>
+
+        <div class="corpo2">
+            <ul>
+                <li class="nao-metal">Não Metais</li>
+                <li class="gas-nobre">Gases Nobres</li>
+                <li class="metal-alcalino">Metais Alcalinos</li>
+                <li class="metal-alcalino-terroso">Metais Alcalino-Terrosos</li>
+                <li class="semimetal">Semimetais</li>
+                <li class="halogenio">Halogênios</li>
+                <li class="outros-metais">Outros Metais</li>
+                <li class="metal-transicao">Metais de Transição</li>
+                <li class="lantanideo">Lantanídeos</li>
+                <li class="actinidio">Actinídios</li>
+            </ul>           
+        </div>
+        <script type="text/javascript" src="js/tema.js"></script>
+    </form>
+</body>
+</html>
